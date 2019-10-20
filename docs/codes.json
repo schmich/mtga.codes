@@ -1,0 +1,164 @@
+[
+  {
+    "code": "PlayRavnica",
+    "description": "Packs: 3 × Guilds of Ravnica",
+    "start": "2018-10-06",
+    "end": "2020-07-01"
+  },
+  {
+    "code": "GAMEAWARDS",
+    "description": "Esports starter kit",
+    "start": "2018-12-16",
+    "end": "2018-12-16"
+  },
+  {
+    "code": "PlayAllegiance",
+    "description": "Packs: 3 × Ravnica Allegiance",
+    "start": "2019-01-17",
+    "end": "2020-07-01"
+  },
+  {
+    "code": "STARTERSTYLES",
+    "description": "Sleeve & Cards: Foil Luminous Bonds, Divination, Doomed Dissenter, Viashino Pyromancer, Llanowar Elves, and Meteor Goelm",
+    "start": "2019-03-28",
+    "end": "2019-07-02"
+  },
+  {
+    "code": "SuperScry",
+    "description": "Card: Foil Opt",
+    "start": "2019-03-29",
+    "end": "2023-01-01"
+  },
+  {
+    "code": "ParallaxPotion",
+    "description": "Card: Foil Revitalize",
+    "start": "2019-03-29",
+    "end": "2023-01-01"
+  },
+  {
+    "code": "FoilFungus",
+    "description": "Card: Foil Deathbloom Thallid",
+    "start": "2019-03-30",
+    "end": "2023-01-01"
+  },
+  {
+    "code": "SparkleDruid",
+    "description": "Card: Foil Druid of the Cowl",
+    "start": "2019-03-31",
+    "end": "2023-01-01"
+  },
+  {
+    "code": "ShinyGoblinPirate",
+    "description": "Card: Foil Fanatical Firebrand",
+    "start": "2019-03-31",
+    "end": "2023-01-01"
+  },
+  {
+    "code": "PlayWarSpark",
+    "description": "Packs: 3 × War of the Spark",
+    "start": "2019-04-23",
+    "end": "2020-07-01"
+  },
+  {
+    "code": "OVERTHEMOON",
+    "description": "Card Style: Arlinn, Voice of the Pack",
+    "start": "2019-05-26",
+    "end": null
+  },
+  {
+    "code": "INNERDEMON",
+    "description": "Card Style: Ob Nixilis, the Hate-Twisted",
+    "start": "2019-05-31",
+    "end": null
+  },
+  {
+    "code": "OneBillion",
+    "description": "Pack: 1 × War of the Spark",
+    "start": "2019-06-04",
+    "end": "2019-08-30"
+  },
+  {
+    "code": "SHIELDSUP",
+    "description": "Card Style: Teyo, the Shieldmage",
+    "start": "2019-06-07",
+    "end": null
+  },
+  {
+    "code": "WRITTENINSTONE",
+    "description": "Card Style: Nahiri, Storm of the Stone",
+    "start": "2019-06-14",
+    "end": null
+  },
+  {
+    "code": "ENLIGHTENME",
+    "description": "Card Style: Narset, Parter of Veils",
+    "start": "2019-06-21",
+    "end": null
+  },
+  {
+    "code": "MYTHICMAGIC",
+    "description": "Cards: 3 × Random mythic rare from War of the Spark, Ravnica Allegiance, or Guilds of Ravnica",
+    "start": "2019-06-25",
+    "end": "2019-07-02"
+  },
+  {
+    "code": "PlayM20",
+    "description": "Packs: 3 × Core Set 2020",
+    "start": "2019-07-02",
+    "end": null
+  },
+  {
+    "code": "LevelUp",
+    "description": "Mastery System: +2000 XP",
+    "start": "2019-07-02",
+    "end": null
+  },
+  {
+    "code": "BroughtBack",
+    "description": "Mastery System: +2000 XP",
+    "start": "2019-07-05",
+    "end": "2019-07-31"
+  },
+  {
+    "code": "BINGOIVMYTHICCHAMP",
+    "description": "Pack: 1 × Core Set 2020",
+    "start": "2019-07-28",
+    "end": "2019-07-31"
+  },
+  {
+    "code": "FiveBonusLevels",
+    "description": "Mastery System: +5000 XP",
+    "start": "2019-09-20",
+    "end": "2019-09-25"
+  },
+  {
+    "code": "PlayEldraine",
+    "description": "Packs: 3 × Throne of Eldraine",
+    "start": "2019-09-26",
+    "end": null
+  },
+  {
+    "code": "ThatsWild",
+    "description": "Card: Foil Grumgully, the Generous",
+    "start": "2019-09-28",
+    "end": "2019-09-29"
+  },
+  {
+    "code": "FoodCourt",
+    "description": "Card: Foil Midnight Clock",
+    "start": "2019-09-28",
+    "end": "2019-09-29"
+  },
+  {
+    "code": "Crumbelina",
+    "description": "Card: Foil Harmonious Archon",
+    "start": "2019-09-28",
+    "end": "2019-09-29"
+  },
+  {
+    "code": "TisAScratch",
+    "description": "Card: Foil Oathsworn Knight",
+    "start": "2019-09-28",
+    "end": "2019-09-29"
+  }
+]

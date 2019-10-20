@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic: the Gathering Arena Promo Codes</title>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#222222">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+  <meta name="description" content="Magic: the Gathering Arena promotional codes">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <style>
+  * {
+    box-sizing: border-box !important;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    background: #272727;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  .content {
+    background: #222;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .logo {
+    display: block;
+    width: 250px;
+    margin: 10px auto 20px auto;
+  }
+  .section {
+    text-align: center;
+    margin: 0 -10px 30px -10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 3px solid #272727;
+    border-bottom: 3px solid #272727;
+    padding: 15px 0;
+  }
+  .codes .entry {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .codes .entry .code {
+    font-size: 26px;
+    font-family: monospace;
+    color: #f53;
+    margin-bottom: 3px;
+    text-shadow: 1px 1px #000;
+  }
+  .codes .entry .description {
+    font-size: 18px;
+  }
+  .codes .entry .timespan {
+    font-size: 14px;
+    color: #ccc;
+  }
+  .codes .entry .description, .codes .entry .timespan {
+    line-height: 150%;
+  }
+  .codes .entry.expired * {
+    color: #777;
+  }
+  </style>
+</head>
+<body>
+  <% seen_active = false; seen_expired = false %>
+  <div class="content">
+    <img src="logo.png" class="logo">
+    <div class="codes">
+      <% codes.each do |code| %>
+        <% if !seen_active && !code.is_expired %>
+          <% seen_active = true %>
+          <div class="section">Active Promo Codes</div>
+        <% elsif !seen_expired && code.is_expired %>
+          <% seen_expired = true %>
+          <div class="section">Expired Promo Codes</div>
+        <% end %>
+        <div class="<%= ['entry', code.is_expired ? 'expired' : null].compact.join(' ') %>">
+          <div class="code"><%= code.code %></div>
+          <div class="description"><%= code.description %></div>
+          <div class="timespan">
+            <%= code.start.strftime('%b %d, %Y') %> – <%= code.end ? code.end.strftime('%b %d, %Y') : 'Unknown' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>
+</html>
+
