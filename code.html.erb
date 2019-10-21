@@ -1,0 +1,7 @@
+<div>
+  <div><%= code.code %></div>
+  <div><%= code.description %></div>
+  <div>
+    <%= code.start.strftime('%b %d, %Y') %> – <%= code.end ? code.end.strftime('%b %d, %Y') : 'Unknown' %>
+  </div>
+</div>

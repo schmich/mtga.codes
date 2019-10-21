@@ -5,8 +5,9 @@ require 'date'
 
 Encoding.default_external = 'utf-8'
 
-def render(template, vars)
+def render(template_filename, vars)
   bind = OpenStruct.new(vars).instance_eval { binding }
+  template = File.read(template_filename)
   ERB.new(template).result(bind)
 end
 
@@ -57,5 +58,5 @@ codes.sort! do |p, q|
   compare.call(p, q)
 end
 
-content = render(File.read(template_filename), codes: codes)
+content = render(template_filename, codes: codes, render: method(:render))
 File.write(output_filename, content)

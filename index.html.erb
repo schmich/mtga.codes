@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://mtga.codes">
   <meta property="og:title" content="Magic: the Gathering Arena Promo Codes">
   <meta property="og:description" content="Magic: the Gathering Arena promotional codes">
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
   <style>
   * {
     box-sizing: border-box !important;
@@ -37,7 +37,7 @@
     width: 250px;
     margin: 10px auto 20px auto;
   }
-  .section {
+  section .title {
     text-align: center;
     margin: 0 -10px 30px -10px;
     text-transform: uppercase;
@@ -48,54 +48,53 @@
     border-bottom: 3px solid #222;
     padding: 15px 0;
   }
-  .codes .entry {
+  /* Code Entry */
+  .codes > :not(:first-child) {
     text-align: center;
     margin-bottom: 40px;
   }
-  .codes .entry .code {
-    font-size: 26px;
+  /* Code */
+  .codes > :not(:first-child) > :first-child {
+    font-size: 24px;
     font-family: monospace;
     color: #f53;
     margin-bottom: 3px;
     text-shadow: 1px 1px #000;
+    letter-spacing: 0.5px;
   }
-  .codes .entry .description {
-    font-size: 18px;
+  /* Description */
+  .codes > :not(:first-child) > :nth-child(2) {
+    font-size: 16px;
   }
-  .codes .entry .timespan {
+  /* Timespan */
+  .codes > :not(:first-child) > :nth-child(3) {
     font-size: 14px;
     color: #ccc;
   }
-  .codes .entry .description, .codes .entry .timespan {
+  /* Description, Timespan */
+  .codes > :not(:first-child) > :not(:first-child) {
     line-height: 150%;
   }
-  .codes .entry.expired * {
+  .codes.expired > :not(:first-child) * {
     color: #777;
   }
   </style>
 </head>
 <body>
-  <% seen_active = false; seen_expired = false %>
   <div class="content">
     <img src="logo.png" class="logo">
-    <div class="codes">
-      <% codes.each do |code| %>
-        <% if !seen_active && !code.is_expired %>
-          <% seen_active = true %>
-          <div class="section">Active Promo Codes</div>
-        <% elsif !seen_expired && code.is_expired %>
-          <% seen_expired = true %>
-          <div class="section">Expired Promo Codes</div>
-        <% end %>
-        <div class="<%= ['entry', code.is_expired ? 'expired' : null].compact.join(' ') %>">
-          <div class="code"><%= code.code %></div>
-          <div class="description"><%= code.description %></div>
-          <div class="timespan">
-            <%= code.start.strftime('%b %d, %Y') %> – <%= code.end ? code.end.strftime('%b %d, %Y') : 'Unknown' %>
-          </div>
-        </div>
+    <section class="codes">
+      <div class="title">Active Promo Codes</div>
+      <% codes.reject(&:is_expired).each do |code| %>
+        <%= render('code.html.erb', code: code) %>
       <% end %>
-    </div>
+    </section>
+    <section class="codes expired">
+      <div class="title">Expired Promo Codes</div>
+      <% codes.select(&:is_expired).each do |code| %>
+        <%= render('code.html.erb', code: code) %>
+      <% end %>
+    </section>
   </div>
 </body>
 </html>
